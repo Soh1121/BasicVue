@@ -27,6 +27,11 @@ var app = new Vue({
         doRemove: function(index) {
             // 受け取ったインデックスの位置から1個要素を削除
             this.list.splice(index, 1)
+        },
+
+        // ボタンのクリックイベントのハンドラ
+        doAttack: function(index) {
+            this.list[index].hp -= 10   // HPを減らす
         }
     }
 })
