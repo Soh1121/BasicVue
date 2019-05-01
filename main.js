@@ -1,3 +1,6 @@
-var app = new VTTCue({
-    el: '#app'
+var app = new Vue({
+    el: '#app',
+    data: {
+        radius: 50
+    }
 })
