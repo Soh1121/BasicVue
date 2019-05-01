@@ -7,10 +7,10 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ message.value }}</p>
-        <p>{{ message.value.length }}</p>
-        <p>{{ list[2] }}</p>
-        <p>{{ list[num] }}</p>
+        <!-- countプロパティを表示する -->
+        <p>{{ count }}回クリックしたよ！</p>
+        <!-- このボタンをクリックするとincrementメソッドが呼び出される -->
+        <button v-on:click="increment">カウントを増やす</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
