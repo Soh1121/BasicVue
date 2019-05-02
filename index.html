@@ -8,7 +8,9 @@
 </head>
 <body>
     <div id="app">
-        <p ref="hello">Hello</p>
+        <button v-on:click="handleClick">カウントアップ</button>
+        <button v-on:click="show=!show">表示/非表示</button>
+        <span ref="count" v-if="show">0</span>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
