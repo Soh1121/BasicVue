@@ -8,7 +8,8 @@
 </head>
 <body>
     <div id="app">
-        <input v-bind:value="message" v-on:input="handleInput">
+        <div v-on:click.right="handler">example</div>
+        <div v-on:click.right.prevent="handler">example</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
