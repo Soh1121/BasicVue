@@ -8,9 +8,14 @@
 </head>
 <body>
     <div id="app">
-        <div v-on:click="handler('div1')">
+        <div v-on:cleck.capture="handler('div1')">
             div1
-            <a href="#top" v-on:click.prevent="handler('div2')">div2</a>
+            <div v-on:click="handler('div2')">
+                div2
+                <div v-on:click="handler('div3')">
+                    div3
+                </div>
+            </div>
         </div>
     </div>
 
