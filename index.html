@@ -9,8 +9,15 @@
 <body>
     <div id="app">
         <label>
-            <input type="checkbox" v-model="val" true-value="yes" false-value="no"> {{ val }}
+            <input type="checkbox" v-model="val" value="A"> A
         </label>
+        <label>
+            <input type="checkbox" v-model="val" value="B"> B
+        </label>
+        <label>
+            <input type="checkbox" v-model="val" value="C"> C
+        </label>
+        <p>{{ val }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
