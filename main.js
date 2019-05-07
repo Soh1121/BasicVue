@@ -1,6 +1,9 @@
 var app = new Vue({
     el: '#app',
-    data: {
-        message: 'Hello Vue.js!'
+    methods: {
+        handler: function(comment) {
+            // 代入前になにか処理を行う
+            console.log(comment)
+        }
     }
 })
