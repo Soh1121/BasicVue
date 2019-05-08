@@ -8,7 +8,8 @@
 </head>
 <body>
     <div id="app">
-        <button v-on:click.shift="handler">ボタン</button>
+        <input type="text" v-model.number="price">
+        {{ price }}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
