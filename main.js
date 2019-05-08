@@ -1,6 +1,9 @@
+var scroll = new SmoothScroll()
 var app = new Vue({
     el: '#app',
-    data: {
-        price: 100
+    methods: {
+        scrollTop: function() {
+            scroll.animateScroll(0)
+        }
     }
 })
