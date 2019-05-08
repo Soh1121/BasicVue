@@ -1,24 +1,9 @@
+var scroll = new SmoothScroll()
 var app = new Vue({
     el: '#app',
-    data: {
-        scrollY: 0,
-        timer: null
-    },
-    created: function() {
-        // ハンドラを登録
-        window.addEventListener('scroll', this.handleScroll)
-    },
-    beforeDestroy: function() {
-        // ハンドラを解除（コンポーネントやSPAの場合忘れずに！）
-        window.removeEventListener('scroll', this.handleScroll)
-    },
     methods: {
-        // 違和感のない程度に200ms感覚でscrollデータを更新する例
-        handleScroll: function() {
-            this.timer = setTimeout(function() {
-                this.scrollY = window.scrollYclearTimeout(this.timer)
-                this.timer = null
-            }.bind(this), 200)
+        scrollTop: function() {
+            scroll.animateScroll(0)
         }
     }
 })
