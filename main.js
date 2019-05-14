@@ -1,9 +1,13 @@
 var scroll = new SmoothScroll()
 var app = new Vue({
     el: '#app',
-    methods: {
-        scrollTop: function() {
-            scroll.animateScroll(0)
+    data: {
+        width: 800
+    },
+    computed: {
+        // 算出プロパティhalfWidthを定義
+        halfWidth: function() {
+            return this.width / 2
         }
     }
 })
