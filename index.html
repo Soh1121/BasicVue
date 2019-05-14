@@ -9,8 +9,16 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
     <div id="app">
-        <input v-model.number="width"> {{ width }}
-        <input v-model.number="halfWidth"> {{ halfWidth }}
+        <!-- 算出プロパティ -->
+        <ol>
+            <li>{{ computedData }}</li>
+            <li>{{ computedData }}</li>
+        </ol>
+        <!-- メソッド -->
+        <ol>
+            <li>{{ methodsData() }}</li>
+            <li>{{ methodsData() }}</li>
+        </ol>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
