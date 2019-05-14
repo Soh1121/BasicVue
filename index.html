@@ -9,8 +9,8 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
     <div id="app">
-        <p>X: {{ halfPoint.x }}</p>
-        <p>Y: {{ halfPoint.y }}</p>
+        <input v-model.number="width"> {{ width }}
+        <input v-model.number="halfWidth"> {{ halfWidth }}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>

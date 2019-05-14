@@ -2,22 +2,13 @@ var scroll = new SmoothScroll()
 var app = new Vue({
     el: '#app',
     data: {
-        width: 800,
-        height: 600
+        width: 800
     },
     computed: {
-        halfWidth: function() {
-            return this.width / 2
-        },
-        halfHeight: function() {
-            return this.height / 2
-        },
-        // 「width × height」の中心座標をオブジェクトで返す
-        halfPoint: function() {
-            return {
-                x: this.halfWidth,
-                y: this.halfHeight
-            }
+        halfWidth: {
+            get: function() { return this.width / 2 },
+            // halfWidthの2倍の数値をwidthに代入する
+            set: function(val) { this.width = val * 2 },
         }
     }
 })
