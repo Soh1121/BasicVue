@@ -1,12 +1,13 @@
 var scroll = new SmoothScroll()
 var app = new Vue({
     el: '#app',
+    data: {
+        video1: false,
+        video2: false
+    },
     directives: {
-        focus: {
-            // 紐付いている要素がDOMに挿入されるとき
-            inserted: function(el) {
-                el.focus() // 要素にフォーカスを当てる
-            }
+        video(el, binding) {
+            binding.value ? el.play() : el.pause()
         }
     }
 })

@@ -9,7 +9,14 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
     <div id="app">
-        <input v-focus>
+        <!-- 動画１ -->
+        <button v-on:click="video1=true">再生</button>
+        <button v-on:click="video1=false">停止</button>
+        <video src="movie1.mp4" v-video="video1"></video>
+        <!-- 動画２ -->
+        <button v-on:click="video2=true">再生</button>
+        <button v-on:click="video2=false">停止</button>
+        <video src="movie2.mp4" v-video="video1"></video>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
