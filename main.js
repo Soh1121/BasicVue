@@ -1,12 +1,12 @@
 var scroll = new SmoothScroll()
 var app = new Vue({
     el: '#app',
-    filters: {
-        round: function(val) {
-            return Math.round(val * 100) / 100
-        },
-        radian: function(val) {
-            return val * Math.PI / 180
+    directives: {
+        focus: {
+            // 紐付いている要素がDOMに挿入されるとき
+            inserted: function(el) {
+                el.focus() // 要素にフォーカスを当てる
+            }
         }
     }
 })
