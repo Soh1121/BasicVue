@@ -7,7 +7,9 @@ var app = new Vue({
     },
     directives: {
         video(el, binding) {
-            binding.value ? el.play() : el.pause()
+            if (binding.value !== binding.oldValue) {
+                binding.value ? el.play() : el.pause()
+            }
         }
     }
 })
