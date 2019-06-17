@@ -2,14 +2,16 @@ var scroll = new SmoothScroll()
 var app = new Vue({
     el: '#app',
     data: {
-        video1: false,
-        video2: false
+        list: []
     },
-    directives: {
-        video(el, binding) {
-            if (binding.value !== binding.oldValue) {
-                binding.value ? el.play() : el.pause()
-            }
+    watch: {
+        list: function() {
+            // 更新後のul要素の高さを取得できない
+            console.log('通常：', this.$refs.list.offsetHeight);
+            // nextTickを使えばできる
+            this.$nextTick(function () {
+                console.log('nextTick:', this.$refs.list.offsetHeight)
+            })
         }
     }
 })
